@@ -1,0 +1,17 @@
+---
+import:
+  - include/workshop
+modname: "Day of Infamy"
+settings:
+  "subscribed_file_ids":
+    value: 
+      - 601757902
+      - 601791962
+      - 604412679
+      - 601789279
+      - 608694820
+  "subscribed_collection_ids":
+    value:
+      - 604418860
+  "host_workshop_collection":
+    default: "604418860"
