@@ -14,7 +14,7 @@ insserver:
     "librt.so.1":
       checksum: "eabf0fc1f81292270343bd0796fc64ca"
   settings:
-    "executable":
+    "server_executable":
       default: "./srcds_linux"
     "appid":
       default: "237410"

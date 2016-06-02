@@ -9,21 +9,21 @@ avalanche:
   settings:
     "engine":
       default: "avalanche"
-    "servercfg":
+    "server_cfg":
       default: "config.lua"
       desc: "Server Config file"
-    "systemdir":
-      default: "\${filesdir}"
-    "executabledir":
-      default: "\${filesdir}"
-    "executable":
+    "game_dir":
+      default: "\${server_dir}"
+    "server_executable_dir":
+      default: "\${server_dir}"
+    "server_executable":
       default: "./Jcmp-Server"
-    "servercfg":
+    "server_cfg":
       default: "config.lua"
-    "servercfgdir":
-      default: "\${filesdir}"
-    "servercfgfullpath":
-      default: "\${servercfgdir}/\${servercfg}"
-    "servercfgdefault":
-      default: "\${servercfgdir}/default_config.lua"
+    "server_cfg_dir":
+      default: "\${server_dir}"
+    "server_cfg_full_path":
+      default: "\${server_cfg_dir}/\${server_cfg}"
+    "server_cfg_default":
+      default: "\${server_cfg_dir}/default_config.lua"
 

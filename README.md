@@ -3,7 +3,7 @@
 
 These files are the proof of concept of my new method of supporting all the games LGSM covers. It's basically a hierarchial way to define three things:
 
- * **Script Parameters:** These are things like executable, game name, local directories, and all the rest.
+ * **Script Parameters:** These are things like server_executable, game name, local directories, and all the rest.
  * **Server Parameters:** These are the command-line switches that we give to the actual game server daemon. There is a little bit of smarts around the Source and GoldSource parsers, we feed it "minus parameters" and "plus parameters", and it spits them out in a somewhat sane order.
  * **Server Settings:** These are the items that go into \_default.yaml for each game. They include the values for the two types of parameters, and are overridden hierarchially by sourcing \_default.yaml, then \_common.yaml, then $instance.yaml from the cfg/servers directory.
 
@@ -18,7 +18,7 @@ The new method uses a hierarchy of files like so:
 The gamedata files themselves use YAML with Python dictionary replacement, so they are merged from the bottom up properly and then interpolated. This lets us keep variable names in the gamedata and script config files, and have it all process at runtime.
  * **include:** An ordered list of files that this gamedata file should include. Omit the .yaml extension, the path is relative to the directory this README is in.
  * **settings:** Configuration settings. These can be processed as server parameters, replacement values for the templates to generate game configs, and anything else that needs to be set. Each item will be referenced by name, and has the following fields:
-  * **parm:** If this setting needs to be fed to the server executable, put the prefix needed here. Set as an empty string if you just want to feed the value of the setting without any interpolation.
+  * **parm:** If this setting needs to be fed to the server server_executable, put the prefix needed here. Set as an empty string if you just want to feed the value of the setting without any interpolation.
   * **default:** Default value. This will populate the lgsm\/%(game)\/cfg\/\_default.yaml file.
   * **desc:** Description of the setting
   * **value:** Override the default setting. This should only be used for things like mods, where we basically want a different default that will be forced. For the most part, this should be left alone.

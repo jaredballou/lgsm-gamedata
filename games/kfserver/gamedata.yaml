@@ -4,11 +4,11 @@
   << *unreal2
 
 fn_parms(){
-parms="server ${map}?game=KFmod.KFGameType?VACSecured=true -nohomedir ini=${servercfg} log=${gamelog}"
+parms="server ${map}?game=KFmod.KFGameType?VACSecured=true -nohomedir ini=${server_cfg} log=${gamelog}"
 
 # Start Variables for Objective mode
 #map="KFO-Steamland"
-#parms="server ${map}?Game=KFStoryGame.KFStoryGame?VACSecured=true -nohomedir ini=${servercfg} log=${gamelog}"
+#parms="server ${map}?Game=KFStoryGame.KFStoryGame?VACSecured=true -nohomedir ini=${server_cfg} log=${gamelog}"
 }
 
 fn_set_game_setting settings "appid" "215360"

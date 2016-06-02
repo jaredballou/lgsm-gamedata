@@ -20,12 +20,12 @@ fn_set_game_setting settings "logfile" "gamelog.txt"
 fn_set_game_setting settings "admins" "--EMPTY--" "Adding admins using STEAMID64. Example : addadmin 012345678901234567; addadmin 987654321098765432"
 
 fn_set_game_setting settings "loadsave" "--EMPTY--" "Rollback server state (remove after start command)"
-fn_set_game_setting settings "x64mode" "0" "Use unstable 64 bit server executable (O/1)"
-fn_set_game_setting settings "filesdir" "${rootdir}/serverfiles"
-fn_set_game_setting settings "systemdir" "${filesdir}"
-fn_set_game_setting settings "executabledir" "${filesdir}"
+fn_set_game_setting settings "x64mode" "0" "Use unstable 64 bit server server_executable (O/1)"
+fn_set_game_setting settings "server_dir" "${root_dir}/serverfiles"
+fn_set_game_setting settings "game_dir" "${server_dir}"
+fn_set_game_setting settings "server_executable_dir" "${server_dir}"
 if [ "${x64mode}" == "1" ]; then
-	fn_set_game_setting settings "executable" "./Hurtworld.x86_64"
+	fn_set_game_setting settings "server_executable" "./Hurtworld.x86_64"
 else
-	fn_set_game_setting settings "executable" "./Hurtworld.x86"
+	fn_set_game_setting settings "server_executable" "./Hurtworld.x86"
 fi

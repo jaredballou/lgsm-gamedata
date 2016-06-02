@@ -4,7 +4,7 @@ halflife_shared:
     - include/steam
   settings:
     "dependency_path":
-      default: "%(filesdir)s/bin"
+      default: "%(server_dir)s/bin"
     "game":
       parm: "-game"
       default: "%(game)s"
@@ -21,9 +21,9 @@ halflife_shared:
     "clientport":
       parm: "+clientport"
       default: "27005"
-    "servercfgfile":
-      parm: "+servercfgfile"
-      default: "%(servercfg)s"
+    "server_cfgfile":
+      parm: "+server_cfgfile"
+      default: "%(server_cfg)s"
     "map":
       parm: "+map"
       default:

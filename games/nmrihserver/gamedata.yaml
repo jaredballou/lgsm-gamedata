@@ -4,11 +4,11 @@
 
 # https://developer.valvesoftware.com/wiki/Command_Line_Options#Source_Dedicated_Server
 fn_parms(){
-parms="-game nmrih -insecure -strictportbind -ip ${ip} -port ${port} +clientport ${clientport} +tv_port ${tv_port} +map ${map} +servercfgfile ${servercfg} -maxplayers ${maxplayers}"
+parms="-game nmrih -insecure -strictportbind -ip ${ip} -port ${port} +clientport ${clientport} +tv_port ${tv_port} +map ${map} +server_cfgfile ${server_cfg} -maxplayers ${maxplayers}"
 }
 
 # Dependencies
-fn_set_game_setting settings "dependency_path" "\${filesdir}"
+fn_set_game_setting settings "dependency_path" "\${server_dir}"
 fn_set_game_setting dependencies  "libm.so.6" "b6fef88fd045bfcd05fd4036f323855c"
 fn_set_game_setting dependencies  "libstdc++.so.6" "4f9c911de2276f988afaf47659a8367f"
 

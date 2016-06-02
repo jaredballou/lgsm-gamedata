@@ -3,10 +3,10 @@
   << *unreal2
 
 fn_parms(){
-parms="server ${map}?game=XGame.xDeathMatch -nohomedir ini=${servercfg} log=${gamelog}"
+parms="server ${map}?game=XGame.xDeathMatch -nohomedir ini=${server_cfg} log=${gamelog}"
 }
 fn_set_game_setting settings "gamename" "Unreal Tournament 2004"
 fn_set_game_setting settings "map" "DM-Rankin"
 
 # Why isn't this Default?
-fn_set_game_setting settings "servercfgdefault" "${servercfgdir}/UT2004.ini"
+fn_set_game_setting settings "server_cfg_default" "${server_cfg_dir}/UT2004.ini"

@@ -20,7 +20,7 @@ settings:
     default: 0
   "sv_workshop_list_file":
     parm: "+sv_workshop_list_file"
-    default: "%(systemdir)s/subscribed_file_ids.txt"
+    default: "%(game_dir)s/subscribed_file_ids.txt"
     desc: "Path to Subscribed Workshop Items file"
   "workshop":
     parm: "-workshop"

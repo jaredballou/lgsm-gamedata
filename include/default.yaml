@@ -1,8 +1,8 @@
 ---
 default:
   settings:
-    "backupdir":
-      default: "%(lgsmdir)s/backups"
+    "backup_dir":
+      default: "%(lgsm_dir)s/backup"
       desc: "Backup Directory"
     "map":
       desc: "Default map to load"
@@ -11,13 +11,13 @@ default:
     "email":
       default: "email@example.com"
       desc: "Email address for notification"
-    "emailnotification":
+    "email_notification":
       default: "off"
       desc: "Email notification (on|off)"
     "engine":
       desc: "Game Engine"
-    "filesdir":
-      default: "%(rootdir)s/serverfiles"
+    "server_dir":
+      default: "%(root_dir)s/serverfiles"
       desc: "Server Files Directory"
     "game":
       desc: "Name of game"
@@ -29,65 +29,65 @@ default:
     "lgsm_version":
       default: "%(version)s"
       desc: "Version of LGSM that created this config"
-    "lockselfname":
-      default: ".%(servicename)s.lock"
+    "game_script_lock":
+      default: ".%(instance_name)s.lock"
       desc: "LGSM Lock File"
-    "logdays":
+    "log_days":
       default: "7"
       desc: "Number of days to retain logs"
     "maxplayers":
       desc: "Maximum player count"
     "port":
       desc: "Port to bind for server"
-    "consolelogdir":
-      default: "%(lgsmserverdir)s/log/console"
+    "console_log_dir":
+      default: "%(game_script_dir)s/log/console"
       desc: "Console Log Dir"
-    "consolelog":
-      default: "%(consolelogdir)s/%(servicename)s-console.log"
+    "console_log":
+      default: "%(console_log_dir)s/%(instance_name)s-console.log"
       desc: "Console Log"
-    "consolelogdate":
-      default: "%(consolelogdir)s/%(servicename)s-console-%(date)s.log"
+    "console_log_date":
+      default: "%(console_log_dir)s/%(instance_name)s-console-%(date)s.log"
       desc: "Console Log Rotation Filename"
-    "scriptlogdir":
-      default: "%(lgsmserverdir)s/log/script"
+    "game_script_log_dir":
+      default: "%(game_script_dir)s/log/script"
       desc: "Script Log Dir"
-    "scriptlog":
-      default: "%(scriptlogdir)s/%(servicename)s-script.log"
+    "game_script_log":
+      default: "%(game_script_log_dir)s/%(instance_name)s-script.log"
       desc: "Script Log"
-    "scriptlogdate":
-      default: "%(scriptlogdir)s/%(servicename)s-script-%(date)s.log"
+    "game_script_log_date":
+      default: "%(game_script_log_dir)s/%(instance_name)s-script-%(date)s.log"
       desc: "Script Log Rotation Filename"
-    "emaillog":
-      default: "%(scriptlogdir)s/%(servicename)s-email.log"
+    "email_log":
+      default: "%(game_script_log_dir)s/%(instance_name)s-email.log"
       desc: "Email Log"
-    "servercfg_suffix":
+    "server_cfg_suffix":
       default: ".cfg"
       desc: "Suffix to put on the end of the server config. For file extensions, use \".ext\", setting to empty will use the bare server config name"
-    "systemdir":
-      default: "%(filesdir)s/%(game)s"
+    "game_dir":
+      default: "%(server_dir)s/%(game)s"
       desc: "System Directory (root of game installation)"
-    "gamelogdir":
-      default: "%(systemdir)s/logs"
+    "game_log_dir":
+      default: "%(game_dir)s/logs"
       desc: "Game log directory"
-    "executabledir":
-      default: "%(filesdir)s"
+    "server_executable_dir":
+      default: "%(server_dir)s"
       desc: "Executable directory"
-    "executable":
+    "server_executable":
       desc: "Executable to invoke to start game server"
-    "servercfgdir":
-      default: "%(systemdir)s/cfg"
+    "server_cfg_dir":
+      default: "%(game_dir)s/cfg"
       desc: "Server config directory"
-    "servercfg":
-      default: "%(servicename)s%(servercfg_suffix)s"
+    "server_cfg":
+      default: "%(instance_name)s%(server_cfg_suffix)s"
       desc: "Server config file for this instance"
-    "servercfgdefault":
-      default: "%(servercfgdir)s/lgsm-default%(servercfg_suffix)s"
+    "server_cfg_default":
+      default: "%(server_cfg_dir)s/lgsm-default%(server_cfg_suffix)s"
       desc: "Default server configuration file"
-    "servercfgfullpath":
-      default: "%(servercfgdir)s/%(servercfg)s"
+    "server_cfg_full_path":
+      default: "%(server_cfg_dir)s/%(server_cfg)s"
       desc: "Full path to server config"
     "dependency_path":
-      default: "%(filesdir)s"
+      default: "%(server_dir)s"
     "server_parms":
       desc: "Additional Server command-line arguments. Put the parameters that start with \"-\" first, then \"+\" parameters after"
   scriptactions:

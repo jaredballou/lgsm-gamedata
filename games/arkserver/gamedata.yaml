@@ -12,17 +12,17 @@ arkserver:
       value: "ShooterGame"
     "gamename":
       value: "ARK: Survival Evolved"
-    "systemdir":
-      value: "%(filesdir)/%(game)"
-    "executabledir":
-      value: "%(systemdir)/Binaries/Linux"
-    "executable":
+    "game_dir":
+      value: "%(server_dir)/%(game)"
+    "server_executable_dir":
+      value: "%(game_dir)/Binaries/Linux"
+    "server_executable":
       value: "./%(game)Server"
-    "servercfg":
+    "server_cfg":
       value: "GameUserSettings.ini"
-    "servercfgdir":
-      value: "%(systemdir)/Saved/Config/LinuxServer"
-    "servercfgfullpath":
-      value: "%(servercfgdir)/%(servercfg)"
-    "servercfgdefault":
-      value: "%(servercfgdir)/lgsm-default.ini"
+    "server_cfg_dir":
+      value: "%(game_dir)/Saved/Config/LinuxServer"
+    "server_cfg_full_path":
+      value: "%(server_cfg_dir)/%(server_cfg)"
+    "server_cfg_default":
+      value: "%(server_cfg_dir)/lgsm-default.ini"

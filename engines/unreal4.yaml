@@ -5,9 +5,9 @@
 # Import default settings
   << *unreal_shared
 
-fn_set_game_setting settings "systemdir" "\${filesdir}/\${game}"
-fn_set_game_setting settings "executabledir" "\${systemdir}/Binaries/Linux"
-fn_set_game_setting settings "executable" "./\${game}Server"
-fn_set_game_setting settings "servercfg" "GameUserSettings.ini"
-fn_set_game_setting settings "servercfgdir" "\${systemdir}/Saved/Config/LinuxServer"
-fn_set_game_setting settings "servercfgdefault" "\${servercfgdir}/lgsm-default.ini"
+fn_set_game_setting settings "game_dir" "\${server_dir}/\${game}"
+fn_set_game_setting settings "server_executable_dir" "\${game_dir}/Binaries/Linux"
+fn_set_game_setting settings "server_executable" "./\${game}Server"
+fn_set_game_setting settings "server_cfg" "GameUserSettings.ini"
+fn_set_game_setting settings "server_cfg_dir" "\${game_dir}/Saved/Config/LinuxServer"
+fn_set_game_setting settings "server_cfg_default" "\${server_cfg_dir}/lgsm-default.ini"

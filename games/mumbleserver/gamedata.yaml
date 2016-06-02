@@ -6,14 +6,14 @@
   << *default
 
 fn_parms(){
-	parms="-fg -ini ${servercfgfullpath}"
+	parms="-fg -ini ${server_cfg_full_path}"
 }
 
 fn_set_game_setting settings "gamename" "Mumble"
-fn_set_game_setting settings "servicename" "mumble-server"
-fn_set_game_setting settings "executable" "./murmur.x86"
-fn_set_game_setting settings "servercfg" "murmur.ini"
-fn_set_game_setting settings "servercfgdir" "\${filesdir}"
+fn_set_game_setting settings "instance_name" "mumble-server"
+fn_set_game_setting settings "server_executable" "./murmur.x86"
+fn_set_game_setting settings "server_cfg" "murmur.ini"
+fn_set_game_setting settings "server_cfg_dir" "\${server_dir}"
 
 # Mumble has no installer. Derp!
 fn_set_game_setting scriptactions "i" "--UNSET--"

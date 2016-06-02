@@ -4,7 +4,7 @@
 
 # https://developer.valvesoftware.com/wiki/Command_Line_Options#Source_Dedicated_Server
 fn_parms(){
-parms="-autoupdate -strictportbind -ip ${ip} -port ${port} +clientport ${clientport} +tv_port ${tv_port} +map ${map} +servercfgfile ${servercfg} -maxplayers ${maxplayers}"
+parms="-autoupdate -strictportbind -ip ${ip} -port ${port} +clientport ${clientport} +tv_port ${tv_port} +map ${map} +server_cfgfile ${server_cfg} -maxplayers ${maxplayers}"
 }
 
 fn_set_game_setting dependencies  "libstdc++.so.6" "4f9c911de2276f988afaf47659a8367f"

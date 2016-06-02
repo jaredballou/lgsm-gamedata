@@ -5,7 +5,7 @@ source:
   settings:
     "engine":
       default: "source"
-    "executable":
+    "server_executable":
       default: "./srcds_run"
     "tv_port":
       parm: "+tv_port"

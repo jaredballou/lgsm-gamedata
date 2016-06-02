@@ -8,7 +8,7 @@ goldsource:
       default: "dm_lockdown"
     "engine":
       default: "goldsource"
-    "executable":
+    "server_executable":
       default: "./hlds_run"
     "ip":
       parm: "+ip"
