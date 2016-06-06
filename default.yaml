@@ -28,8 +28,8 @@ settings:
   "ip":
     default: "0.0.0.0"
     desc: "IP Address to bind for server"
-  "game_script_lock":
-    default: ".%(instance_name)s.lock"
+  "instance_lock":
+    default: "%(lgsm_dir)s/.%(instance_name)s.lock"
     desc: "LGSM Lock File"
   "log_days":
     default: "7"
@@ -39,7 +39,7 @@ settings:
   "port":
     desc: "Port to bind for server"
   "console_log_dir":
-    default: "%(game_script_dir)s/log/console"
+    default: "%(lgsm_dir)s/log/%(game_script_name)%/console"
     desc: "Console Log Dir"
   "console_log":
     default: "%(console_log_dir)s/%(instance_name)s-console.log"
@@ -48,7 +48,7 @@ settings:
     default: "%(console_log_dir)s/%(instance_name)s-console-%(date_string)s.log"
     desc: "Console Log Rotation Filename"
   "game_script_log_dir":
-    default: "%(game_script_dir)s/log/script"
+    default: "%(lgsm_dir)s/log/%(game_script_name)%/script"
     desc: "Script Log Dir"
   "game_script_log":
     default: "%(game_script_log_dir)s/%(instance_name)s-script.log"
