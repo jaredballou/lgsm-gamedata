@@ -9,11 +9,11 @@ These files are the proof of concept of my new method of supporting all the game
 
 The new method uses a hierarchy of files like so:
  * **engine:** Engine-specific files, like Source or Unreal4.
- * **games:** Each directory correlates to a game, the name of the directory is what the installer will name the script it will install for the root instance.
+ * **game:** Each directory correlates to a game, the name of the directory is what the installer will name the script it will install for the root instance.
   * **cfg:** Templates for game-specific configs
-  * **gamedata.yaml:** The core gamedata file for this game
+  * **name.yaml:** The core gamedata file for this game
   * **mods:** Optional path where mod config files are stored.
- * **include:** Everything else, from the default config to snippets to implement different features.
+ * **platform:** Content delivery platforms. Currently only Steam is supported.
 
 The gamedata files themselves use YAML with Python dictionary replacement, so they are merged from the bottom up properly and then interpolated. This lets us keep variable names in the gamedata and script config files, and have it all process at runtime.
  * **include:** An ordered list of files that this gamedata file should include. Omit the .yaml extension, the path is relative to the directory this README is in.

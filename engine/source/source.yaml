@@ -1,0 +1,43 @@
+---
+import:
+  - platform/steam
+settings:
+  "engine":
+    default: "source"
+  "platform":
+    default: "steam"
+  "dependency_path":
+    default: "%(server_dir)s/bin"
+  "game":
+    parm: "-game"
+    default: "%(game)s"
+  "strictportbind":
+    parm: "-strictportbind"
+    default: true
+    format: noarg
+  "port":
+    parm: "-port"
+    default: "27015"
+  "maxplayers":
+    parm: "-maxplayers"
+    default: "64"
+  "clientport":
+    parm: "+clientport"
+    default: "27005"
+  "server_cfgfile":
+    parm: "+server_cfgfile"
+    default: "%(server_cfg)s"
+  "map":
+    parm: "+map"
+    default:
+  "server_executable":
+    default: "./srcds_run"
+  "tv_port":
+    parm: "+tv_port"
+    default: "27020"
+scriptactions:
+  sourcemod:
+    command: "install_sourcemod.sh"
+    desc: "Install SourceMod"
+    aliases:
+      - sm
