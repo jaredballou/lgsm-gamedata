@@ -3,8 +3,6 @@ settings:
   "backup_dir":
     default: "%(lgsm_dir)s/backup"
     desc: "Backup Directory"
-  "map":
-    desc: "Default map to load"
   "game_mod":
     desc: "Mod to load from gamedata/mods"
   "email":
@@ -28,36 +26,32 @@ settings:
   "ip":
     default: "0.0.0.0"
     desc: "IP Address to bind for server"
-  "instance_lock":
-    default: "%(lgsm_dir)s/.%(instance_name)s.lock"
+  "script_instance_lock":
+    default: "%(lgsm_dir)s/.%(script_instance)s.lock"
     desc: "LGSM Lock File"
   "log_days":
     default: "7"
     desc: "Number of days to retain logs"
-  "maxplayers":
-    desc: "Maximum player count"
-  "port":
-    desc: "Port to bind for server"
-  "console_log_dir":
-    default: "%(lgsm_dir)s/log/%(game_script_name)%/console"
+  "script_instance_log_console_dir":
+    default: "%(lgsm_dir)s/log/%(script_game)%/console"
     desc: "Console Log Dir"
-  "console_log":
-    default: "%(console_log_dir)s/%(instance_name)s-console.log"
+  "script_instance_log_console":
+    default: "%(script_instance_log_console_dir)s/%(script_instance)s-console.log"
     desc: "Console Log"
-  "console_log_date":
-    default: "%(console_log_dir)s/%(instance_name)s-console-%(date_string)s.log"
+  "script_instance_log_console_date":
+    default: "%(script_instance_log_console_dir)s/%(script_instance)s-console-%(date_string)s.log"
     desc: "Console Log Rotation Filename"
-  "game_script_log_dir":
-    default: "%(lgsm_dir)s/log/%(game_script_name)%/script"
+  "script_game_lgsm_log_dir":
+    default: "%(lgsm_dir)s/log/%(script_game)%/lgsm"
     desc: "Script Log Dir"
-  "game_script_log":
-    default: "%(game_script_log_dir)s/%(instance_name)s-script.log"
+  "script_game_lgsm_log":
+    default: "%(script_game_lgsm_log_dir)s/%(script_instance)s-lgsm.log"
     desc: "Script Log"
-  "game_script_log_date":
-    default: "%(game_script_log_dir)s/%(instance_name)s-script-%(date_string)s.log"
+  "script_game_lgsm_log_date":
+    default: "%(script_game_lgsm_log_dir)s/%(script_instance)s-lgsm-%(date_string)s.log"
     desc: "Script Log Rotation Filename"
   "email_log":
-    default: "%(game_script_log_dir)s/%(instance_name)s-email.log"
+    default: "%(script_game_lgsm_log_dir)s/%(script_instance)s-email.log"
     desc: "Email Log"
   "server_cfg_suffix":
     default: ".cfg"
@@ -77,7 +71,7 @@ settings:
     default: "%(game_dir)s/cfg"
     desc: "Server config directory"
   "server_cfg":
-    default: "%(instance_name)s%(server_cfg_suffix)s"
+    default: "%(script_instance)s%(server_cfg_suffix)s"
     desc: "Server config file for this instance"
   "server_cfg_default":
     default: "%(server_cfg_dir)s/lgsm-default%(server_cfg_suffix)s"

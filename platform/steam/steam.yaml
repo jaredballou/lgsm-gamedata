@@ -4,20 +4,26 @@ import:
 settings:
   "appid":
     desc: "Steam App ID"
+  "beta":
+    parm: "-beta"
+    default: ""
+    desc: "Beta branch to use. Leave empty for stable branch"
+  "map":
+    desc: "Default map to load"
+  "maxplayers":
+    desc: "Maximum player count"
+  "port":
+    desc: "Port to bind for server"
+  "platform":
+    default: "steam"
   "steampass":
     desc: "Steam Password"
   "steamuser":
     default: "anonymous"
     desc: "Steam Username"
-  "platform":
-    default: "steam"
   "updateonstart":
     default: "off"
     desc: "Update game on start"
-  "beta":
-    parm: "-beta"
-    default: ""
-    desc: "Beta branch to use. Leave empty for stable branch"
 scriptactions:
   force-update:
     command: "set forceupdate=1; update_check.sh"
